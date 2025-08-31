@@ -64,26 +64,26 @@ const Cart = () => {
                     navigate('/my-orders')
                 }else{
                     toast.error(data.message)
-                }
-            }else{
-                //place order with strip
+                }}
+            // }else{
+            //     //place order with strip
 
-                const {data} = await axios.post('/api/order/stripe',{
-                    userId : user._id,
-                    items: cartArray.map(item=> ({product: item._id,quantity: item.quantity})),
-                    address: selectedAddress._id
-                })
-                if(data.success){
-                    // toast.success(data.message)
-                    // setCartItems({})
-                    // navigate('/my-orders')
-                    window.location.replace(data.url)
-                }else{
-                    toast.error(data.message)
-                }
+            //     const {data} = await axios.post('/api/order/stripe',{
+            //         userId : user._id,
+            //         items: cartArray.map(item=> ({product: item._id,quantity: item.quantity})),
+            //         address: selectedAddress._id
+            //     })
+            //     if(data.success){
+            //         // toast.success(data.message)
+            //         // setCartItems({})
+            //         // navigate('/my-orders')
+            //         window.location.replace(data.url)
+            //     }else{
+            //         toast.error(data.message)
+            //     }
 
 
-            }
+            // }
 
         } catch (error) {
             toast.error(error.message)
