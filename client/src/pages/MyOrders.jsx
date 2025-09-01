@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import { useAppContext } from '../context/AppContext'
-import { dummyOrders } from '../assets/assets'
+// import { dummyOrders } from '../assets/assets'
 // import { dummyOrders } from '../assets/assets'
 
 const MyOrders = () => {
 
-    const [myOrders,setMyOrders] = useState([])
+    const [myorders,setMyOrders] = useState([])
     const {currency, axios, user} = useAppContext()
 
     const fetchMyOrders= async ()=>{
         try {
             const { data } = await axios.get('/api/order/user')
             if(data.success){
-                setMyOrders(data.orders || [])
+                setMyOrders(data.orders)
             }
         } catch (error) {
             console.log(error)
@@ -33,7 +33,7 @@ const MyOrders = () => {
             <p className='text-2xl font-medium uppercase'>My Orders</p>
             <div className='w-16 h-0.5 bg-primary rounded-full'></div>
         </div>
-        {myOrders.map((order,index)=>(
+        {myorders.map((order,index)=>(
             <div key={index} className='border border-gray-300 rounded-lg mb-10 p-4 py-5 max-w-4xl'>
                 <p className='flex justify-between md:items-center text-gray-400 md:font-medium max-md:flex-col'>
                     <span>OrderId : {order._id}</span>
