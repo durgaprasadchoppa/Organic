@@ -70,8 +70,17 @@ import vanilla_muffins_image from "./vanilla_muffins_image.png";
 import quinoa_image from "./quinoa_image.png";
 import brown_rice_image from "./brown_rice_image.png";
 import barley_image from "./barley_image.png";
+import farm1 from "./farm1.jpg";
+import farm2 from "./farm2.jpg";
+import farm3 from "./farm3.webp";
+
+
+
 
 export const assets = {
+  farm1,
+  farm2,
+  farm3,
   Ar_logo,
   logo,
   search_icon,

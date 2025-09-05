@@ -105,7 +105,7 @@
 
 import React, { useEffect, useState } from 'react';
 import slide1 from '../assets/slide1.jpeg';
-import slide2 from '../assets/slide2.jpeg';
+// import slide2 from '../assets/slide2.jpeg';
 import main_banner_bg from '../assets/main_banner_bg.png';
 import main_banner_bg_sm from '../assets/main_banner_bg_sm.png';
 import { assets } from '../assets/assets';
@@ -114,13 +114,14 @@ import { Link } from 'react-router-dom';
 // Desktop and mobile slides
 const slidesDesktop = [
   main_banner_bg,
+  
   slide1,
-  slide2,
+  assets.farm2
 ];
 const slidesMobile = [
   main_banner_bg_sm,
   slide1,
-  slide2,
+  assets.farm2
 ];
 
 const MainBanner = () => {

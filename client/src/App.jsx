@@ -18,6 +18,7 @@ import AddProduct from './pages/seller/AddProduct'
 import ProductList from './pages/seller/ProductList'
 import Orders from './pages/seller/Orders'
 import Loading from './components/Loading'
+import Farms from './pages/Farms'
 
 const App = () => {
 
@@ -42,7 +43,7 @@ const App = () => {
           <Route path='/add-address' element={<AddAddress/>}/>
           <Route path='/my-orders' element={<MyOrders/>}/>
           <Route path='/loader' element={<Loading/>}/>
-
+          <Route path='/farms' element={<Farms/>}/>
           <Route path='/seller' element={isSeller ? <SellerLayout/> : <SellerLogin/>}>
             <Route index element={isSeller ? <AddProduct/> : null}/>
             <Route path='product-list' element={<ProductList/>}/>

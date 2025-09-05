@@ -41,7 +41,7 @@ const Navbar = () => {
             <div className="hidden sm:flex items-center gap-8">
                 <NavLink to='/'>Home</NavLink>
                 <NavLink to='/products'>All Products</NavLink>
-                <NavLink to='/farm'>Farms</NavLink>
+                <NavLink to='/farms'>Farms</NavLink>
 
 
                 <div className="hidden lg:flex items-center text-sm gap-2 border border-gray-300 px-3 rounded-full">
@@ -89,7 +89,7 @@ const Navbar = () => {
                 {user &&
                     <NavLink to="/my-orders" onClick={()=> setOpen(false)}>My Orders</NavLink>
                 }
-                <NavLink to="/" onClick={()=> setOpen(false)}>Farms</NavLink>
+                <NavLink to="/farms" onClick={()=> setOpen(false)}>Farms</NavLink>
                 {!user ?(
                     <button onClick={()=>{
                         setOpen(false);
