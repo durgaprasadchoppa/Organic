@@ -22,6 +22,8 @@ await connectCloudinary()
 
 //allow multiple origins
 const allowedOrigins = ['http://localhost:5173']
+// const allowedOrigins = ['https://organic-beta.vercel.app']
+
 
 // app.post('/stripe',express.raw({type: 'application/json'}),stripeWebhooks)
 

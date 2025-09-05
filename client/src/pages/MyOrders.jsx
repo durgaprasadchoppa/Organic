@@ -8,6 +8,7 @@
 //     const [myorders,setMyOrders] = useState([])
 //     const {currency, axios, user} = useAppContext()
 
+// <<<<<<< HEAD
 //     const fetchMyOrders= async ()=>{
 //         try {
 //             const { data } = await axios.get('/api/order/user')
@@ -17,6 +18,17 @@
 //         } catch (error) {
 //             console.log(error)
 //         }
+// =======
+//     const fetchMyOrders= async ()=>{
+//         try {
+//             const { data } = await axios.get('/api/order/user')
+//             if(data.success){
+//                 setMyOrders(data.message)
+//             }
+//         } catch (error) {
+//             console.log(error)
+//         }
+// >>>>>>> 34ec65fe49d3edc89cb57b0e576a9b17d2b77e88
        
 //     }
 
