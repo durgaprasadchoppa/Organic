@@ -140,6 +140,23 @@ export const getAllOrders = async(req,res)=>{
 
 
 
+// Delete (Cancel & Remove) Order by ID : /api/order/:orderId
+export const deleteOrder = async (req, res) => {
+    try {
+        const { orderId } = req.params;
+        const deletedOrder = await Order.findByIdAndDelete(orderId);
+        if (!deletedOrder) {
+            return res.json({ success: false, message: "Order not found" });
+        }
+        res.json({ success: true, message: "Order cancelled and removed" });
+    } catch (error) {
+        res.status(500).json({ success: false, message: error.message });
+    }
+}
+
+
+
+
 //place Order STRIPE : /api/order/stripe
 
 

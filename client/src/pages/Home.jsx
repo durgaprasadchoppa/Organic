@@ -5,10 +5,12 @@ import BestSeller from '../components/BestSeller'
 import BottomBanner from '../components/BottomBanner'
 import NewsLetter from '../components/NewsLetter'
 import Footer from '../components/Footer'
+import Banner from '../components/Banner'
 
 const Home = () => {
   return (
     <div className='mt-10'>
+        {/* <Banner/> */}
         <MainBanner />
         <Categories />
         <BestSeller />

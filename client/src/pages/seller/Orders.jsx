@@ -12,7 +12,7 @@ const Orders = () => {
     try {
         const { data } = await axios.get('/api/order/seller');
         if(data.success){
-            setOrders(data.orders)
+            setOrders(data.message || []);
         }else{
             toast.error(data.message)
         }
