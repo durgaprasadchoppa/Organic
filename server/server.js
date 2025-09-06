@@ -21,8 +21,11 @@ await connectDB()
 await connectCloudinary()
 
 //allow multiple origins
-const allowedOrigins = ['http://localhost:5173']
+// const allowedOrigins = ['http://localhost:5173']
 // const allowedOrigins = ['https://organic-beta.vercel.app']
+
+const allowedOrigins = ['https://arcart-qwmk.onrender.com']
+
 
 
 // app.post('/stripe',express.raw({type: 'application/json'}),stripeWebhooks)
